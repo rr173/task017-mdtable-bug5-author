@@ -232,7 +232,7 @@ func displayWidth(s string) int {
 
 // runeWidth 返回单个 rune 的显示宽度。
 func runeWidth(r rune) int {
-	if r == 0 || r < 0x10 || r == 0x7f {
+	if r == 0 || r < 0x20 || r == 0x7f {
 		return 0 // 控制字符
 	}
 	if isWide(r) {
